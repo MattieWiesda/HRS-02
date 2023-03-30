@@ -1,0 +1,126 @@
+body table{
+	font-size:11px;
+	font-style:normal;
+	background-color:#CCFFFF
+}
+
+table{
+	background-color:#CCFFFF;
+}
+
+select{
+	height:16px;
+	font-size:11px;
+}
+
+
+.clsWeekNumber {
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-width: 1px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #CCFF33;
+	text-align: center;
+}
+
+.clsWeek td{
+	text-align:center;
+	padding:0px;
+	margin:0px;
+}
+
+.clsNullDataDisplay{
+	border-style:none;
+	background-color:transparent;
+	/*background-color:#FFFF99;*/
+	padding:0px;
+}
+
+.clsWeekStart{
+	background-color:#00CCFF
+}
+//	<td class="weekFirst clsWeek" style="background-color:#00CCFF;text-align:center;padding:0px;margin:0px;">Fr</td>
+.clsWeekEnd{
+	
+}
+.clsDisplayDates{
+	height:19px;
+}
+
+.clsWorkingDay{
+	border-style:solid;
+	border-width:1px;
+	text-align:center;
+}
+
+.clsTrEmployee{
+height:16px;
+	}
+
+.clsTrEmployee td {
+	background-color:aqua;
+}
+
+th, td, select {
+  border: 1px solid black;
+  border-radius: 8px;
+  height:16px;
+}
+
+input {
+	border: 1px solid black;
+	border-radius: 8px;
+	height: 19px;
+}
+
+.clsDay{
+	padding:2px;
+	margin:2px;
+	border-style:solid;
+	border-width:1px;
+	border-radius:4px;
+}
+
+.clsDayNames{
+	background-color:#00CCFF;
+	text-align:center;
+
+}
+
+.clsDates{
+	background-color:#5eafb5;
+}
+
+.clsNavDate{
+	width:5px;
+}
+	
+#tblTimeline24hrs tr th {
+	border-style:solid;border-width:1px;
+}
+
+#tblTimeline24hrs td{
+	padding:5px;
+}
+
+table.clsTblYearMonth {
+	/*background-color: burlywood;*/
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	margin-left:95px;
+}
+table.clsTblYearMonth th{
+	height:19px;
+}
+
+table.clsTblTimeTableWeek {
+/*	background-color:coral;*/
+	background-color:#CCFFFF
+
+}
+
+tr.clsTblTimeTableWeek{height:14px;}
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>HR Scheduler</title>
+
+	<link rel="stylesheet" href="css/hrscheduler.css">
+	<style type="text/css">
+        #idDivWeeklySchedule{background-color:lightgrey;
+							 padding:66px;
+        }
+
+		#idDivWeeklySchedule * input {margin-top: 5px;}
+
+        #idApplySettingsWeeklySchedule.input {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+	</style>
+
+	<script type="text/javascript" src="js/hrscheduler.js"></script>
+	<script type="text/javascript" src="js/createTable.js"></script>
+	<script type="text/javascript" src="js/datecalc.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
+
+	<script type="text/javascript" src="js/HRScheduler.css.js"></script>
+</head>
+	
+<body id="idHRSBody" onload="setHRScheduler()">
+	
+	<h2>HR Scheduler : </h2>
+
+	
+	<br />
+
+	<div id="tableGeneral">
+		<table id="tblYearMonth" class="clsTblYearMonth">
+			<tr>
+				<th class="clsNullDataDisplay"></th>
+				<th style="width: 20px;background-color:#00CCFF;">Year</th>
+				<th class="clsNullDataDisplay"></th>
+				<th class="clsNullDataDisplay"></th>
+				<th style="background-color:#00CCFF;">Month</th>
+				<th class="clsNullDataDisplay"></th>
+			</tr>
+
+			<tr>
+				<!-- YEAR: -->
+				<td onclick="navigateYear(-1)">&#171</td>
+				<td id="idSelectedYear" style="background-color:#FF6699;width:35px;text-align:center">20--</td>
+				<td onclick="navigateYear(1)">&#187</td>
+
+				<!-- MONTH -->
+				<td onclick="navigateMonth(-1)">&#171</td>
+				<td id="idSelectedMonth" style="background-color:#FF6699;width:65px;text-align:center">Marchtest</td>
+				<td onclick="navigateMonth(1)">&#187</td>
+			</tr>
+		</table>
+	</div>
+
+	<hr />
+	<div id="idDivWeeklySchedule">
+		<table id="idTableSetWeeklySchedule">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Su</th>
+					<th>Mo</th>
+					<th>Tu</th>
+					<th>We</th>
+					<th>Th</th>
+					<th>Fr</th>
+					<th>Sa</th>
+					<th>-</th>
+					<th>Even</th>
+					<th>Odd</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>Harold</td>
+					<td><input id="HAR_0" onclick="editSchedule('HAR_0', 0, 5)" name="Checkbox1" type="checkbox"></td>
+					<td><input id="HAR_1" onclick="editSchedule('HAR_1', 1, 5)" name="Checkbox1" type="checkbox"></td>
+					<td><input id="HAR_2" onclick="editSchedule('HAR_1', 2, 5)" name="Checkbox1" type="checkbox"></td>
+					<td><input id="HAR_3" onclick="editSchedule('HAR_1', 3, 5)" name="Checkbox1" type="checkbox"></td>
+					<td><input id="HAR_4" onclick="editSchedule('HAR_1', 4, 5)" name="Checkbox1" type="checkbox"></td>
+					<td><input id="HAR_5" onclick="editSchedule('HAR_1', 5, 5)" name="Checkbox1" type="checkbox"></td>
+					<td><input id="HAR_6" onclick="editSchedule('HAR_1', 6, 56)" name="Checkbox1" type="checkbox"></td>
+					<td>-</td>
+					<td><input id="HAR_even" onclick="editSchedule('HAR_even', 'weekEven')" name="Checkbox1" type="checkbox"></td>
+					<td><input id="HAR_odd" onclick="editSchedule('HAR_odd', 'weekOdd')" name="Checkbox1" type="checkbox"></td>
+				</tr>
+
+				<tr>
+					<td style="margin-left:50px;">Mitchel</td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td>-</td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+				</tr>
+
+				<tr>
+					<td>Nicholas</td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td>-</td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+
+				</tr>
+
+				<tr>
+					<td>Erik</td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td>-</td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+					<td><input name="Checkbox1" type="checkbox"></td>
+				</tr>
+			</tbody>
+		</table>
+			<form id="idApplySettingsWeeklySchedule" method="post">
+				<input name="cmdApplySchedule" type="button" value="Apply weekly schedule"><br />
+				<!-- <input name="cmdApplyScheduleAlways" type="button" value="Always apply weekly schedule"><br />-->
+				<input name="cmdResetSchedule" type="button" value="Reset weekly schedule"><br />
+				<input name="cmdAddEmployee" type="button" value="Add coworker"><br />
+				<input name="cmdEditEmailList" type="button" value="Edit email list"><br />
+				<input name="cmdSendScheduleAs" type="button" value="Send schedule as">
+				<select name="selectFormat">
+					<option>pdf</option>
+					<option>xml</option>
+					<option>Excel</option>
+					<option>JSON</option>
+
+				</select>
+			</form>
+		
+	</div><!-- end idDivWeeklySchedule -->
+
+	<!-- TODO : REMOVE THE TABLE BELOW: -->
+	<table id="timeTableWeek" class="clsTblTimeTableWeek" style="visibility:hidden">
+		<tr style="background-color:#CCFFCC;border:2px;border-style:solid;border-width:1px;">
+			<th class="clsNullDataDisplay"></th>
+			<th class="clsNullDataDisplay"></th>
+			<th class="clsNullDataDisplay"></th>
+			<th style="border-style:none">&#171;</th>
+			<th style="border-style:none">Week:</th>
+			<th style="border-style:none">&#187;</th>
+			
+			<th id="idStartingWeekNumber" class="clsWeekNumber">Starting week nr</th>
+			<th class="clsNullDataDisplay"></th>
+			<th class="clsNullDataDisplay"></th>
+			<th class="clsNullDataDisplay"></th>
+			<th class="clsNullDataDisplay"></th>
+			<th class="clsNullDataDisplay"></th>
+			<th class="clsNullDataDisplay"></th>
+		</tr>
+
+		
+	</table>
+	<div id="dev2" style="visibility:hidden;">
+						<hr /><p><h2>View all coworkers: </h2>
+						<button type="button" onclick="viewEmployeesXML()" value="View all employees">Employees view</button>
+						</p>
+						<div id="viewCoworkersXML">
+
+						</div>
+
+						<p>
+							<h3>View variables:</h3>
+							<label>ux month ISO current</label><input id="uxMIC" type="text" value="" /><br />
+							<label>ux month name current</label><input id="uxMNC" type="text" value="" /><br />
+							<label>ux month ISO Previous</label><input id="uxMIP" type="text" value="" /><br />
+							<label>ux month name Previous</label><input id="uxMNP" type="text" value="" /><br />
+							<label>ux month ISO next</label><input id="uxMIN" type="text" value="" /><br />
+							<label>ux month name next</label><input id="uxMNN" type="text" value="" /><br /><br />
+							<label>ux day ISO current</label><input id="" type="text" value="" /><br />
+							<label>ux day name current</label><input id="" type="text" value="" /><br />
+							<label>ux day ISO previous</label><input id="" type="text" value="" /><br />
+							<label>ux day name previous</label><input id="" type="text" value="" /><br />
+							<label>ux day ISO next</label><input id="" type="text" value="" /><br />
+							<label>ux day name next</label><input id="" type="text" value="" /><br />
+							<label></label><input type="text" value="" /><br />
+							<label></label><input type="text" value="" /><br />
+						</p>
+	</div>
+</body>
+
+</html>
