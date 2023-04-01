@@ -265,7 +265,7 @@ function fillInnerHTML(content, idRow, idColumn){
 	} else if (idRow == 7 && idColumn == 0) {
 		document.getElementById(idRow + '_' + idColumn).innerHTML = 'Nicholas';
 	}else if (idRow == 8 && idColumn == 0) {
-					document.getElementById(idRow + '_' + idColumn).innerHTML = 'Erik';
+		document.getElementById(idRow + '_' + idColumn).innerHTML = 'Matteo';
 	} else if (idColumn == 1 || idColumn == 2 || idColumn == 3 || idColumn == 5) {
 		//console.log('64: for columns 1,2,3 and 5=> empty content');
 		console.log('268. todo what??');

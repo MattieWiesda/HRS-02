@@ -1,0 +1,351 @@
+﻿body {	background-color:"#FFFFFF"}
+
+font {	font-family:"Segui", Tahoma, Geneva, Verdana, sans-serif; }
+
+p {	color:#000000}
+
+select {	background-color:#FFFFFF;
+		/*border-bottom-style:hidden;*/
+		color:#7979FF;
+		height:25px;
+		margin-right:10px;
+		-webkit-border-radius: 5px;
+    	-moz-border-radius: 5px;
+    	border-radius: 5px;
+    	border:1px solid black;
+}
+		
+input {	background-color:#FFFFFF;
+		color:#400080;
+		/*border-bottom-style:hidden;
+		border-bottom-style:groove;*/
+		/*width:160px;*/
+		height: 23px;  /* height is not 25, adjust to label */
+		height:15px;
+
+		margin-bottom:5px;
+    	line-height:18px;
+    	padding:2px 5px;
+    	/*  */
+    	-webkit-border-radius: 5px;
+    	-moz-border-radius: 5px;
+    	border-radius: 5px;
+    	border:1px solid black;
+}
+		
+label {
+		background-color:#FFFFFF;
+		height:25px;
+}
+			
+/* removed from input.lo01:
+
+border-style:none ;
+	disabled;
+	width:120px;
+	color:#000000;
+	color:#7979FF;
+	border-color:#7979FF;
+	tabindex:-1;
+	
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid black;
+    
+    
+	
+    
+    border-style:none;
+	disabled;
+	margin-left:40px;
+	width:145px;
+	border-color:#7979FF;
+	tabindex:-1;	
+
+*/
+
+			
+input.lo01 {
+	border-style:none ;
+	disabled;
+	width:120px;
+	color:#000000;
+	color:#7979FF;
+	border-color:#7979FF;
+	tabindex:-1;
+	
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid black;
+
+	
+}
+
+input.lo02{
+	border-style:none;
+	disabled;
+	margin-left:40px;
+	width:145px;
+	border-color:#7979FF;
+	tabindex:-1;	
+}
+
+input.lo03{
+	/* layout input fld for the 8 diagnoses */
+	margin-left:5px;
+	width:20px;
+	height:15px;
+}
+
+input.lo04{
+	background-color:#DFDFFF;
+	height:15px;
+	border-color:#7979FF;
+	/*margin-top:2px;*/
+}
+			
+input.size01 {background-color:#FFFFFF;
+	margin-left:10px;
+	/*width:160px;*/
+}
+
+label.size01 {
+	margin-left:30px;
+	width:100px;
+	/*width:160px;*/
+}
+
+input.size02{
+	margin-left:20px;
+	/*width:160px;*/
+}
+
+label.size02 {
+	margin-left:20px;
+	/*width:160px;*/
+}
+
+label.lo03{
+	margin-left:10px;
+	width:150px;
+}
+
+button.loLNG{
+	width:18px;
+	height:14px;
+	background-color:#FFFFFF;
+	font-size:8px;
+	margin-left:3px;	
+}
+
+button{
+	background-color:#CCCCFF;
+	background-color:#6666FF;
+	color:#000000;
+	height: 28px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid black;
+}
+
+fieldset{
+	margin-top:140px;
+	border-color:#7979FF;
+	float:left;
+		border-color:#7979FF;
+		margin-right:15px;
+		color:black;
+		-webkit-border-radius: 5px;
+    	-moz-border-radius: 5px;
+    	border-radius: 5px;
+    	border:1px solid black;	
+}
+
+legend{
+	color:#7979FF;
+	color:#000000;
+/*	color: black;*/
+}
+
+
+/*  MENU: _________________________________*/
+
+/* 10 */
+nav ul ul {
+	display: none;
+}
+
+/*  20  */
+nav ul li:hover > ul {
+	display: block;
+}
+
+/*  30  */
+nav ul {
+		/*display: block;*/
+    	float: left;
+    	/*width: 100%;*/
+    	padding: 0;
+    	margin: 0;
+    	list-style-type: none;
+		margin-before: 1em;
+		margin-after: 1em;
+		margin-start: 0;
+		margin-end: 0;
+		padding-start: 40px; 
+		padding: 0px 20px;
+		background:#99CCFF;
+		background-color:#7979FF;
+		background-color:#DFDFFF;
+		/*background: #efefef; */ 
+		background: linear-gradient(top, #99CCFF 0%, #bbbbbb 100%);  
+		background: -moz-linear-gradient(top, #99CCFF 0%, #bbbbbb 100%); 
+		background: -webkit-linear-gradient(top, #99CCFF 0%,#bbbbbb 100%); 
+		/*box-shadow: 0px 0px 9px rgba(0,0,0,0.1); */
+		/*border-radius: 5px;  */
+		/*list-style: none;*/
+		position: relative;
+		display: inline-table;
+		-webkit-border-radius: 5px; 
+		-moz-border-radius: 5px; 
+		border-radius: 5px;
+		}
+
+/*  40  */
+nav ul:after {
+	content: ""; clear: both; display: block;
+}
+
+/*  50  */
+nav ul li {
+	float: left;
+	width:150px;
+	height:29px;
+	}
+
+/*  60  */
+nav ul li:hover {
+		background: #4b545f;  /*  pick the right color please   */
+	}
+
+/*  70  */
+nav ul li:hover a {
+	color: #fff;
+	}
+
+/*  80  */			
+nav ul li a {
+		background-color:#7979FF;
+		display: block; 
+		padding: 5px 5px;
+		color: #757575;    /* color of characters in main menu   */
+		color:#000000;
+		text-decoration: none;
+	}
+
+/* 90 */
+nav ul ul {
+	background: #5f6975; 
+	border-radius: 0px; 
+	padding: 0;
+	position: absolute; 
+	top: 100%;
+}
+
+/* 100 het toeveogen van deze regel maakt de submenu's nog niet zichtbaar */ 
+nav ul ul li {
+	float: none; 
+	/*border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #575f6a; */
+	position: relative;
+}
+
+
+/* 110 */ 
+nav ul ul li a {
+	padding: 5px 10px;
+	color: #fff;
+	color: fuchsia;
+}	
+
+/* 120 */
+nav ul ul li a:hover {
+	background: #4b545f;
+	}
+
+
+/* 130 */
+nav ul ul ul {
+	position: absolute; left: 100%; top:0;
+}
+
+/*  MENU LAYOUT   */
+li+li { border-left: 1px solid #000000 }
+/*
+OR USE:  li~li { border-left: 1px solid #000000 }
+
+the lines below are not perfect:
+li { border-right: 1px solid #000000; }
+li:last { border-right: none }
+*/
+/*   END MENU LAYOUT    */
+
+table, th, td {
+   border: 1px solid black; 
+   border-collapse: collapse; 
+   border-spacing: 0; 
+   }   /*// cellspacing="0"  */ 
+   
+td { 
+	width: 160px; 
+	height: 23px;
+	}
+	
+table {
+	width: 100%;    
+	border-collapse: collapse;
+}
+
+th {
+    height: 20px;
+}
+
+td {
+    height: 20px;
+    vertical-align: bottom;
+}
+
+#PatInfo {
+	/*background-color:lime*/
+}
+.img_prt{
+	display:inline-block;
+	width: 64px; 
+	height: 64px; 
+}
+
+.nav3 {
+	background-color:#FFFFFF;
+	height: 102px;
+	width: 1150px;
+	float: left;
+	padding-left: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+
+footer {
+            background-color: #333;
+            background-color:#FFFFFF;
+            margin-bottom:0px;
+            bottom: 0;
+            /*position: relative;*/
+            height:106px;
+            width:auto;
+}
